@@ -16,6 +16,10 @@ class PaymentService {
 
         return $price;
     }
+
+    public function calculateTax(float $amount, float $taxRate): float {
+        return $amount * $taxRate;
+    }
 }
 
 // Exemple d'utilisation
