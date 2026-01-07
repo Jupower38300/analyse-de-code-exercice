@@ -20,6 +20,12 @@ class PaymentService {
     public function calculateTax(float $amount, float $taxRate): float {
         return $amount * $taxRate;
     }
+
+    public function applyDiscount(float $amount, float $discount): float {
+        return $amount - $discount;
+    }
+
+    
 }
 
 // Exemple d'utilisation
