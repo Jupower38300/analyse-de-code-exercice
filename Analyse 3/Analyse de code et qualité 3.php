@@ -25,6 +25,14 @@ class PaymentService {
         return $amount - $discount;
     }
 
+    public function logTransaction(string $message): void {
+        error_log($message);
+    }
+
+    public function validatePaymentMethod(string $type): bool {
+        $validMethods = ["card", "paypal", "bank_transfer"];
+        return in_array($type, $validMethods);
+    }
     
 }
 
